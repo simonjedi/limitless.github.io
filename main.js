@@ -41,6 +41,7 @@ function submitForm(e){
 
   // Clear form
   document.getElementById('contactForm').reset();
+  print('working')
 }
 
 // Function to get get form values
