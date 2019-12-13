@@ -1,15 +1,23 @@
 // Initialize Firebase (ADD YOUR OWN DATA)
-var firebaseConfig = {
-    apiKey: "AIzaSyA8JkR_0P3dLTRijUSsXcCPQ1E8XSk9N6w",
-    authDomain: "limitlessaiform.firebaseapp.com",
-    databaseURL: "https://limitlessaiform.firebaseio.com",
-    projectId: "limitlessaiform",
-    storageBucket: "limitlessaiform.appspot.com",
-    messagingSenderId: "633198110973",
-    appId: "1:633198110973:web:e6da6e66627ef2f95b7694",
-    measurementId: "G-QZMQRS7RTG"
+var config = {
+  apiKey: "AIzaSyA8JkR_0P3dLTRijUSsXcCPQ1E8XSk9N6w",
+  authDomain: "limitlessaiform.firebaseapp.com",
+  databaseURL: "https://limitlessaiform.firebaseio.com",
+  projectId: "limitlessaiform",
+  storageBucket: "limitlessaiform.appspot.com",
+  messagingSenderId: "633198110973"
+
+
+  // apiKey: "AIzaSyA8JkR_0P3dLTRijUSsXcCPQ1E8XSk9N6w",
+  //   authDomain: "limitlessaiform.firebaseapp.com",
+  //   databaseURL: "https://limitlessaiform.firebaseio.com",
+  //   projectId: "limitlessaiform",
+  //   storageBucket: "limitlessaiform.appspot.com",
+  //   messagingSenderId: "633198110973",
+  //   appId: "1:633198110973:web:e6da6e66627ef2f95b7694",
+  //   measurementId: "G-QZMQRS7RTG"
 };
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(config);
 
 // Reference messages collection
 var messagesRef = firebase.database().ref('messages');
@@ -18,8 +26,6 @@ var messagesRef = firebase.database().ref('messages');
 document.getElementById('contactForm').addEventListener('submit', submitForm);
 
 // Submit form
-
-
 function submitForm(e){
   e.preventDefault();
 
@@ -43,18 +49,6 @@ function submitForm(e){
 
   // Clear form
   document.getElementById('contactForm').reset();
-}
-
-
-function funct1(evt)
-{
-  var title = $('#post-title').text();
-
-  var post = $('#post-content').text();
-
-  var date = Date();
-
-
 }
 
 // Function to get get form values
