@@ -8,14 +8,15 @@ var config = {
   messagingSenderId: "633198110973"
 
 
-  // apiKey: "AIzaSyA8JkR_0P3dLTRijUSsXcCPQ1E8XSk9N6w",
-  //   authDomain: "limitlessaiform.firebaseapp.com",
-  //   databaseURL: "https://limitlessaiform.firebaseio.com",
-  //   projectId: "limitlessaiform",
-  //   storageBucket: "limitlessaiform.appspot.com",
-  //   messagingSenderId: "633198110973",
-  //   appId: "1:633198110973:web:e6da6e66627ef2f95b7694",
-  //   measurementId: "G-QZMQRS7RTG"
+
+    // apiKey: "AIzaSyA8JkR_0P3dLTRijUSsXcCPQ1E8XSk9N6w",
+    //   authDomain: "limitlessaiform.firebaseapp.com",
+    //   databaseURL: "https://limitlessaiform.firebaseio.com",
+    //   projectId: "limitlessaiform",
+    //   storageBucket: "limitlessaiform.appspot.com",
+    //   messagingSenderId: "633198110973",
+    //   appId: "1:633198110973:web:e6da6e66627ef2f95b7694",
+    //   measurementId: "G-QZMQRS7RTG"
 };
 firebase.initializeApp(config);
 
