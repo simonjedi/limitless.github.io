@@ -28,7 +28,7 @@ var fbToForm = function fbToForm (key, sel) {
       appId: "1:633198110973:web:e6da6e66627ef2f95b7694",
       measurementId: "G-QZMQRS7RTG",
     };
-    _fb = _fb && _fb.name === "fbToForm" ? _fb : firebase.initializeApp(config, "fbToForm");
+    _fb = _fb && _fb.name === "fbToForm" ? _fb : firebase.initializeApp(firebaseConfig, "fbToForm");
     _fb.database().ref('user-data/' + key).on('value', function(snapshot) {
         _setFormData(sel, snapshot.val());
     });
