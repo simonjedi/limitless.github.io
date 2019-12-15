@@ -31,7 +31,71 @@ function submitForm(e){
   e.preventDefault();
 
 
+  var form1 = document.getElementsByName('question1');
+  if(form1[0].checked)
+  {
+    var q1 = document.getElementById('inlineRadio1').value;
+  }
+  else if(form1[1].checked)
+  {
+    var q1 = (document.getElementById('inlineRadio2').value)
+  }
+  else if(form1[2].checked)
+  {
+    var q1 = (document.getElementById('inlineRadio3').value)
+  }
+  else if(form1[3].checked)
+  {
+    var q1 = (document.getElementById('inlineRadio4').value)
+  }
+  else if(form1[4].checked)
+  {
+    var q1 = (document.getElementById('inlineRadio5').value)
+  }
 
+  var form2 = document.getElementsByName('question2');
+  if(form2[0].checked)
+  {
+    var q2 = document.getElementById('inlineRadio1').value;
+  }
+  else if(form2[1].checked)
+  {
+    var q2 = (document.getElementById('inlineRadio2').value)
+  }
+  else if(form2[2].checked)
+  {
+    var q2 = (document.getElementById('inlineRadio3').value)
+  }
+  else if(form2[3].checked)
+  {
+    var q2 = (document.getElementById('inlineRadio4').value)
+  }
+  else if(form2[4].checked)
+  {
+    var q2 = (document.getElementById('inlineRadio5').value)
+  }
+
+  var form3 = document.getElementsByName('question3');
+  if(form3[0].checked)
+  {
+    var q3 = document.getElementById('inlineRadio1').value;
+  }
+  else if(form3[1].checked)
+  {
+    var q3 = (document.getElementById('inlineRadio2').value)
+  }
+  else if(form3[2].checked)
+  {
+    var q3 = (document.getElementById('inlineRadio3').value)
+  }
+  else if(form3[3].checked)
+  {
+    var q3 = (document.getElementById('inlineRadio4').value)
+  }
+  else if(form3[4].checked)
+  {
+    var q3 = (document.getElementById('inlineRadio5').value)
+  }
 
   var form4 = document.getElementsByName('question4');
   if(form4[0].checked)
@@ -524,9 +588,9 @@ function submitForm(e){
   var name = getInputVal('name');
   var email = getInputVal('email');
   var tel = getInputVal('tel');
-  var question1 = getInputVal('inputGroupSelect01');
-  var question2 = getInputVal('inputGroupSelect02');
-  var question3 = getInputVal('inputGroupSelect03');
+  var question1 = q1;
+  var question2 = q2;
+  var question3 = q3;
   var question4 = q4;
   var question5 = q5;
   var question6 = q6;
