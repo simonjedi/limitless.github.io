@@ -30,15 +30,44 @@ document.getElementById('contactForm').addEventListener('submit', submitForm);
 function submitForm(e){
   e.preventDefault();
 
+
+
+
+  var form4 = document.getElementsByName('question4');
+  if(form4[0].checked)
+  {
+    var q4 = document.getElementById('inlineRadio1').value;
+  }
+  else if(form4[1].checked)
+  {
+    var q4 = (document.getElementById('inlineRadio2').value)
+  }
+  else if(form4[2].checked)
+  {
+    var q4 = (document.getElementById('inlineRadio3').value)
+  }
+  else if(form4[3].checked)
+  {
+    var q4 = (document.getElementById('inlineRadio4').value)
+  }
+  else if(form4[4].checked)
+  {
+    var q4 = (document.getElementById('inlineRadio5').value)
+  }
+
   // Get values
   // var team = getInputVal('team');
   var team = getInputVal('team');
   var email = getInputVal('email');
   var tel = getInputVal('tel');
-  var result = getInputVal('inputGroupSelect03');
+  var question1 = getInputVal('inputGroupSelect01');
+  var question2 = getInputVal('inputGroupSelect02');
+  var question3 = getInputVal('inputGroupSelect03');
+  var question4 = q4;
+
 
   // Save message
-  saveMessage( team, email, tel, result);
+  saveMessage( team, email, tel, question1,question2,question3,question4);
 
   // Show alert
   document.querySelector('.alert').style.display = 'block';
@@ -58,13 +87,19 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveMessage( team, email, tel, result){
+function saveMessage( team, email, tel, question1,question2,question3,question4){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
 
     team:team,
     email:email,
     tel:tel,
-    q1_result:result
+    question1:question1,
+    question2:question2,
+    question3:question3,
+    question4:question4,
+
+
+
   });
 }
