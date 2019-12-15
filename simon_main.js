@@ -519,6 +519,7 @@ function submitForm(e){
     var q25 = (document.getElementById('inlineRadio5').value)
   }
   // Get values
+  // 
   // var team = getInputVal('team');
   var team = getInputVal('team');
   var email = getInputVal('email');
