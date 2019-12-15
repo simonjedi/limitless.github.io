@@ -519,9 +519,9 @@ function submitForm(e){
     var q25 = (document.getElementById('inlineRadio5').value)
   }
   // Get values
-  // 
-  // var team = getInputVal('team');
+  //
   var team = getInputVal('team');
+  var name = getInputVal('name');
   var email = getInputVal('email');
   var tel = getInputVal('tel');
   var question1 = getInputVal('inputGroupSelect01');
@@ -549,11 +549,16 @@ function submitForm(e){
   var question23 = q23;
   var question24 = q24;
   var question25 = q25;
+  var feedback = getInputVal('feedback');
+  var agree = getInputVal('agree');
+
+
+
 
 
   // Save message
-  saveMessage( team, email, tel, question1,question2,question3,question4,question5,question6,question7,question8,question9,question10,question11,question12,
-  question13,question14,question15,question16,question17,question18,question19,question20,question21,question22,question23,question24,question25);
+  saveMessage( name, team, email, tel, question1,question2,question3,question4,question5,question6,question7,question8,question9,question10,question11,question12,
+  question13,question14,question15,question16,question17,question18,question19,question20,question21,question22,question23,question24,question25,feedback,agree);
 
   // Show alert
   document.querySelector('.alert').style.display = 'block';
@@ -573,11 +578,12 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveMessage( team, email, tel, question1,question2,question3,question4,question5,question6,question7,question8,question9,question10,question11,question12,
-question13,question14,question15,question16,question17,question18,question19,question20,question21,question22,question23,question24,question25){
+function saveMessage( name, team, email, tel, question1,question2,question3,question4,question5,question6,question7,question8,question9,question10,question11,question12,
+question13,question14,question15,question16,question17,question18,question19,question20,question21,question22,question23,question24,question25,feedback,agree){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
 
+    name:name,
     team:team,
     email:email,
     tel:tel,
@@ -606,6 +612,8 @@ question13,question14,question15,question16,question17,question18,question19,que
     question23:question23,
     question24:question24,
     question25:question25,
+    feedback:feedback,
+    agree:agree,
 
 
 
