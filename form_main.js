@@ -1,3 +1,16 @@
+
+var twilio = require('twilio');
+// var twilltel = = getInputVal('tel');
+// Find your account sid and auth token in your Twilio account Console.
+var client = new twilio('AC74595b5d2fc1bc619743deabf485e766', '6b87a852b80552ed516c3bc57b8d07b9');
+
+// Send the text message.
+client.messages.create({
+  to: '+7738737884',
+  from: '+15162462129',
+  body: 'Hello from Twilio!'
+});
+
 // Initialize Firebase (ADD YOUR OWN DATA)
 var config = {
   apiKey: "AIzaSyA8JkR_0P3dLTRijUSsXcCPQ1E8XSk9N6w",
@@ -7,16 +20,6 @@ var config = {
   storageBucket: "limitlessaiform.appspot.com",
   messagingSenderId: "633198110973"
 
-
-
-    // apiKey: "AIzaSyA8JkR_0P3dLTRijUSsXcCPQ1E8XSk9N6w",
-    //   authDomain: "limitlessaiform.firebaseapp.com",
-    //   databaseURL: "https://limitlessaiform.firebaseio.com",
-    //   projectId: "limitlessaiform",
-    //   storageBucket: "limitlessaiform.appspot.com",
-    //   messagingSenderId: "633198110973",
-    //   appId: "1:633198110973:web:e6da6e66627ef2f95b7694",
-    //   measurementId: "G-QZMQRS7RTG"
 };
 firebase.initializeApp(config);
 
