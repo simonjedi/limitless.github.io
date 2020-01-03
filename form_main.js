@@ -1,17 +1,3 @@
-
-var twilio = require('twilio');
-// var twilltel = = getInputVal('tel');
-// Find your account sid and auth token in your Twilio account Console.
-var client = new twilio('AC74595b5d2fc1bc619743deabf485e766', '6b87a852b80552ed516c3bc57b8d07b9');
-
-// Send the text message.
-client.messages.create({
-  to: '+7738737884',
-  from: '+15162462129',
-  body: 'Hello from Twilio!'
-});
-
-// Initialize Firebase (ADD YOUR OWN DATA)
 var config = {
   apiKey: "AIzaSyA8JkR_0P3dLTRijUSsXcCPQ1E8XSk9N6w",
   authDomain: "limitlessaiform.firebaseapp.com",
@@ -590,7 +576,6 @@ function submitForm(e){
   var team = getInputVal('team');
   var name = getInputVal('name');
   var email = getInputVal('email');
-  var tel = getInputVal('tel');
   var question1 = q1;
   var question2 = q2;
   var question3 = q3;
@@ -645,7 +630,7 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveMessage( name, team, email, tel, question1,question2,question3,question4,question5,question6,question7,question8,question9,question10,question11,question12,
+function saveMessage( name, team, email, question1,question2,question3,question4,question5,question6,question7,question8,question9,question10,question11,question12,
 question13,question14,question15,question16,question17,question18,question19,question20,question21,question22,question23,question24,question25,feedback,agree){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
@@ -653,7 +638,6 @@ question13,question14,question15,question16,question17,question18,question19,que
     name:name,
     team:team,
     email:email,
-    tel:tel,
     question1:question1,
     question2:question2,
     question3:question3,
