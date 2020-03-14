@@ -40,13 +40,14 @@ function submitForm(e){
   // Save message
   saveMessage(name, company, email, phone, message);
 
-  // Show alert
-  document.querySelector('.alert').style.display = 'block';
 
   // Hide alert after 3 seconds
   setTimeout(function(){
     document.querySelector('.alert').style.display = 'none';
   },3000);
+
+  // Show alert
+  document.querySelector('.alert').style.display = 'block';
 
   // Clear form
   document.getElementById('contactForm').reset();
